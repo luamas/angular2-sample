@@ -1,0 +1,66 @@
+<div class="container">
+  <div [hidden]="submitted">
+      <form  (ngSubmit)="onSubmit()" #userForm="ngForm" role="form">
+        <legend>创建用户</legend>
+        <div class="form-group">
+          <label for="name">姓名</label>
+          <input type="text" class="form-control" id="name" placeholder="请输入姓名..." name="name" required [(ngModel)]="model.name" #name="ngModel">
+          <div [hidden]="name.valid || name.pristine"
+               class="alert alert-danger">
+            姓名必须
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="age">年龄</label>
+          <!--这里我们创建了一个模板变量age-->
+          <input type="text" class="form-control" id="age" placeholder="请输入年龄..." name="age" required [(ngModel)]="model.age" #age="ngModel">
+          <div [hidden]="age.valid || age.pristine"
+               class="alert alert-danger">
+            年龄必须
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="school">学校</label>
+          <input type="text" class="form-control" id="school" placeholder="请输入学校..." name="school" [(ngModel)]="model.school">
+        </div>
+        <div class="form-group">
+          <label for="hobby">爱好</label>
+          <select class="form-control" id="hobby" required [(ngModel)]="model.hobby" name="hobby" #hobby="ngModel">
+            <option value="">请选择</option>
+            <option *ngFor="let hob of hobbys" [value]="hob">{{hob}}</option>
+          </select>
+          <div [hidden]="hobby.valid || hobby.pristine" class="alert alert-danger">
+            爱好必须填写
+          </div>
+        </div>
+
+
+
+        <!--只有验证都通过了按钮才可用-->
+        <button type="submit" class="btn btn-success" [disabled]="!userForm.form.valid">保存</button>
+        <button type="button" class="btn btn-default" (click)="newUser(); userForm.reset()">重置表单</button>
+      </form>
+  </div>
+  <div [hidden]="!submitted">
+    <h2>提交内容:</h2>
+    <div class="row">
+      <div class="col-xs-3">姓名</div>
+      <div class="col-xs-9  pull-left">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">年龄</div>
+      <div class="col-xs-9 pull-left">{{ model.age }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">学校</div>
+      <div class="col-xs-9 pull-left">{{ model.school }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">爱好</div>
+      <div class="col-xs-9 pull-left">{{ model.hobby }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">编辑</button>
+  </div>
+</div>
