@@ -1,20 +1,3 @@
-<h1>{{title}}</h1>
-<h2>介绍: {{introduction}}</h2>
-<h2>我的技能:</h2>
-方法一展示
-<ul>
-  <!--这里采用TypeScript语法遍历skills-->
-  <li *ngFor="let skill of skills1">
-    id: {{ skill.id }} ,名称: {{ skill.name }}
-  </li>
-</ul>
-方法二展示
-<ul class="show2">
-  <!--这里采用TypeScript语法遍历skills-->
-  <li *ngFor="let skill of skills2">
-    id: {{ skill.id }} ,名称: {{ skill.name }}
-  </li>
-</ul>
-
-<p *ngIf="skills1.length >= 3">哇,好厉害哦,你有三种以上技能!</p>
-<p *ngIf="skills1.length < 3">您不到三种技能,加油哦!</p>
+<h1>
+  {{title}}
+</h1>

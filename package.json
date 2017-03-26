@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "angular2-sample",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -12,26 +12,22 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.0",
     "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
     "@angular/http": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/platform-server": "^4.0.0",
     "@angular/router": "^4.0.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "typescript": "^2.2.1",
-    "zone.js": "^0.8.5"
+    "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "^1.0.0",
-    "@angular/compiler-cli": "^2.4.0",
+    "@angular/cli": "1.0.0",
+    "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "^2.5.46",
     "@types/node": "^7.0.11",
     "codelyzer": "~2.0.0",
@@ -46,6 +42,6 @@
     "protractor": "~5.1.0",
     "ts-node": "^3.0.2",
     "tslint": "~4.5.0",
-    "typescript": "~2.2.1"
+    "typescript": "~2.2.0"
   }
 }

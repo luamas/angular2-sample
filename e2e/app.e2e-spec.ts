@@ -1,10 +1,10 @@
-import { MyAppPage } from './app.po';
+import { Angular2SamplePage } from './app.po';
 
-describe('my-app App', () => {
-  let page: MyAppPage;
+describe('angular2-sample App', () => {
+  let page: Angular2SamplePage;
 
   beforeEach(() => {
-    page = new MyAppPage();
+    page = new Angular2SamplePage();
   });
 
   it('should display message saying app works', () => {
