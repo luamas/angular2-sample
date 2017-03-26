@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <!-- top navbar-->
+  <app-header></app-header>
+  <!-- sidebar-->
+  <div class="row container">
+    <app-sidebar class="col-sm-4"></app-sidebar>
+    <section class="col-sm-8">
+      <!-- Page content-->
+      <div class="content-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+  </div>
+  <!-- Main section-->
+
+  <!-- Page footer-->
+  <app-footer style="position: fixed;bottom: 5px;z-index: 111;align-content: center;left: 0;right: 0;text-align: center"></app-footer>
+</div>
