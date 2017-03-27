@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {InputModule} from './input/input.module';
-import {MyformModule} from './myform/myform.module';
+import {routes} from './routes';
+import {RouterModule} from '@angular/router';
+import {CommonModule} from '@angular/common';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    InputModule,
-    MyformModule
+    RouterModule.forRoot(routes)
   ],
-  declarations: []
+  declarations: [],
+  exports: [RouterModule]
 })
 export class RoutesModule { }
