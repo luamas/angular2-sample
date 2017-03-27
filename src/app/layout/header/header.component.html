@@ -1,36 +1,167 @@
-<nav class="navbar navbar-inverse" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#example-navbar-collapse" aria-expanded="false">
-        <span class="sr-only">导航</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand">
-        <img src="/assets/images/logo.png" height="100%" />
-      </a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a class="icon-bar">后台管理系统</a>
-        </li>
-        <li><a><i class="fa fa-user-circle"></i>菜单一</a>
-        </li>
-        <li><a><i class="fa fa-user-circle"></i>菜单二</a>
-        </li>
-        <li><a><i class="fa fa-user-circle"></i>菜单三</a>
-        </li>
-        <li><a><i class="fa fa-user-circle"></i>菜单四</a>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a><i class="fa fa-user-md fa-lg"></i>欢迎您,admin</a>
-        </li>
-        <li><a>安全退出<i class="fa fa-remove"></i></a>
-        </li>
-      </ul>
-    </div>
+<!--
+<nav class="navbar navbar-toggleable bg-inverse navbar-fixed-top topnav">
+  &lt;!&ndash;<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"&ndash;&gt;
+          &lt;!&ndash;data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"&ndash;&gt;
+          &lt;!&ndash;aria-label="Toggle navigation">&ndash;&gt;
+    &lt;!&ndash;<span class="navbar-toggler-icon"></span>&ndash;&gt;
+  &lt;!&ndash;</button>&ndash;&gt;
+  <img src="/assets/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+  <a class="navbar-brand" [routerLink]="['','home']">后台管理系统</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav navbar-light navbar-toggler-right">
+      <li class="nav-item">
+        <a href="https://github.com/start-angular/SB-Admin-BS4-Angular-2/archive/master.zip"
+           class="btn btn-default-outline buy-now-btn" role="button"
+           style="padding: .375rem 1rem !important; border-color: #999;">Download Now</a>
+      </li>
+      <li class="nav-item" dropdown>
+        &lt;!&ndash; <div class="dropdown"> &ndash;&gt;
+        <a class="nav-link dropdown-toggle" href="javascript:;" id="dropdownMenu4" dropdownToggle><i
+          class="fa fa-envelope"></i> <b class="caret"></b><span class="sr-only">(current)</span></a>
+        <ul class="dropdown-menu message-dropdown" aria-labelledby="dropdownMenu4">
+          <li class="message-preview">
+            <a class="dropdown-item">
+              <div class="media">
+                                    <span class="media-left">
+                                        <img class="media-object"
+                                             src="http://i.huffpost.com/gadgets/slideshows/461162/slide_461162_6224974_sq50.jpg"
+                                             alt="">
+                                    </span>
+                <div class="media-body">
+                  <h5 class="media-heading"><strong>John Smith</strong>
+                  </h5>
+                  <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                  <p class="last"> Lorem ipsum dolor sit amet, consectetur...</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <hr>
+          <li class="message-preview">
+            <a class="dropdown-item">
+              <div class="media">
+            <span class="media-left">
+                <img class="media-object" src="http://i.huffpost.com/gadgets/slideshows/461162/slide_461162_6224974_sq50.jpg">
+            </span>
+                <div class="media-body">
+                  <h5 class="media-heading"><strong>luamas</strong>
+                  </h5>
+                  <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                  <p class="last"> Lorem ipsum dolor sit amet, consectetur...</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <hr>
+          <li class="message-preview">
+            <a class="dropdown-item">
+              <div class="media">
+                <span class="media-left">
+                    <img class="media-object" src="http://i.huffpost.com/gadgets/slideshows/461162/slide_461162_6224974_sq50.jpg">
+                </span>
+                <div class="media-body">
+                  <h5 class="media-heading"><strong>John Smith</strong></h5>
+                  <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                  <p class="last"> Lorem ipsum dolor sit amet, consectetur...</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <hr>
+          <li class="dropdown-item message-footer">
+            <a href="javascript:;" class="dropdown-item text-center">Read All New Messages</a>
+          </li>
+        </ul>
+        &lt;!&ndash; </div> &ndash;&gt;
+      </li>
+      <li class="dropdown nav-item" dropdown>
+        &lt;!&ndash; <div class="dropdown"> &ndash;&gt;
+        <a href="javascript:;" id="name2" class="nav-link dropdown-toggle" dropdownToggle>
+          <i class="fa fa-bell"></i> <b class="caret"></b><span class="sr-only">(current)</span>
+        </a>
+        <ul class="dropdown-menu alert-dropdown" aria-labelledby="name2">
+          <li>
+            <a href="javascript:;" class="dropdown-item">Alert Name <span
+              class="label label-default"> Alert Badge</span></a>
+          </li>
+          <li>
+            <a href="javascript:;" class="dropdown-item">Alert Name <span
+              class="label label-default"> Alert Badge</span></a>
+          </li>
+          <li>
+            <a href="javascript:;" class="dropdown-item">Alert Name <span
+              class="label label-default"> Alert Badge</span></a>
+          </li>
+          <li class="dropdown-divider"></li>
+          <li>
+            <a href="javascript:;" class="dropdown-item">View All</a>
+          </li>
+        </ul>
+        &lt;!&ndash; </div> &ndash;&gt;
+      </li>
+      <li class="dropdown nav-item" dropdown>
+        <a id="single-button" class="nav-link dropdown-toggle" dropdownToggle>
+          <i class="fa fa-user"></i> John Smith <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="single-button">
+          <li>
+            <a class="dropdown-item"><i class="fa fa-fw fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+          </li>
+          <li>
+            <a class="dropdown-item"><i class="fa fa-fw fa-gear"></i> Settings</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a class="dropdown-item" [routerLink]="['/']">
+              <i class="fa fa-fw fa-power-off"></i> 退出
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+-->
+
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-faded bg-inverse navbar-fixed-top">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand btn-outline-info" href="/home">后台管理系统</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+    <form class="form-inline mx-auto my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="搜索">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">检索</button>
+    </form>
+    <ul class="navbar-nav mt-md-0 my-lg-0">
+      <li class="dropdown nav-item" dropdown>
+        <a id="single-button" class="nav-link dropdown-toggle" dropdownToggle >
+          <i class="fa fa-user"></i> luamas <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="single-button">
+          <li>
+            <a class="dropdown-item"><i class="fa fa-fw fa-user"></i> 资料</a>
+          </li>
+          <li>
+            <a class="dropdown-item"><i class="fa fa-fw fa-envelope"></i> 消息</a>
+          </li>
+          <li>
+            <a class="dropdown-item"><i class="fa fa-fw fa-gear"></i> 设置</a>
+          </li>
+          <li class="divider"></li>
+          <li>
+            <a class="dropdown-item" [routerLink]="['/']">
+              <i class="fa fa-fw fa-power-off"></i> 退出
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </nav>

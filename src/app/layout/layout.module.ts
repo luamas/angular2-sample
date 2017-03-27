@@ -5,10 +5,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import {RouterModule} from '@angular/router';
+import {DropdownModule, Ng2BootstrapModule} from 'ng2-bootstrap';
 
 @NgModule({
   imports: [
-    RouterModule
+    CommonModule,
+    RouterModule,
+    DropdownModule.forRoot(),
+    Ng2BootstrapModule.forRoot()
   ],
   declarations: [LayoutComponent, HeaderComponent, FooterComponent, SidebarComponent],
   exports: [LayoutComponent, HeaderComponent, FooterComponent, SidebarComponent]

@@ -1,77 +1,169 @@
 <!--<ul class="nav nav-pills nav-stacked">-->
-  <!--<li role="presentation" routerLink="/home" routerLinkActive="active"><a>首页<span class="badge"></span></a></li>-->
-  <!--<li role="presentation" routerLink="/input" routerLinkActive="open"><a>用户输入<span class="badge"></span></a></li>-->
+<!--<li role="presentation" routerLink="/home" routerLinkActive="active"><a>首页<span class="badge"></span></a></li>-->
+<!--<li role="presentation" routerLink="/input" routerLinkActive="open"><a>用户输入<span class="badge"></span></a></li>-->
 
 
-  <!--<li role="presentation" routerLink="/myform" routerLinkActive="active"><a>表单<span class="badge"></span></a></li>-->
+<!--<li role="presentation" routerLink="/myform" routerLinkActive="active"><a>表单<span class="badge"></span></a></li>-->
 <!--</ul>-->
 
-<div class="panel panel-success left-menu">
-  <!-- 利用data-target指定要折叠的分组列表 -->
-  <div class="panel-heading collapsed hidden" data-toggle="collapse in" data-target="#bs-example-collapse-0" role="tab"  aria-expanded="false" >
-    <h4 class="panel-title">
-      分组1
-      <span class="fa fa-chevron-right right"></span>
-    </h4>
-  </div>
-  <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
-  <div id="bs-example-collapse-0" class="panel-collapse collapse in" role="tabpanel">
-    <div class="list-group">
-      <a class="list-group-item" routerLink="/home" routerLinkActive="active">
-        首页
-      </a>
-    </div>
-  </div>
-</div>
+<!--<div class="panel panel-success left-menu">-->
+<!--&lt;!&ndash; 利用data-target指定要折叠的分组列表 &ndash;&gt;-->
+<!--<div class="panel-heading collapsed hidden" data-toggle="collapse in" data-target="#bs-example-collapse-0" role="tab"  aria-expanded="false" >-->
+<!--<h4 class="panel-title">-->
+<!--分组1-->
+<!--<span class="fa fa-chevron-right right"></span>-->
+<!--</h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 &ndash;&gt;-->
+<!--<div id="bs-example-collapse-0" class="panel-collapse collapse in" role="tabpanel">-->
+<!--<div class="list-group">-->
+<!--<a class="list-group-item" routerLink="/home" routerLinkActive="active">-->
+<!--首页-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
-<div class="panel panel-success left-menu">
-  <!-- 利用data-target指定要折叠的分组列表 -->
-  <div class="panel-heading collapsed" data-toggle="collapse in" data-target="#bs-example-collapse-1" role="tab"  aria-expanded="false" >
-    <h4 class="panel-title">
-      输入事件
-      <span class="fa fa-chevron-right right"></span>
-    </h4>
-  </div>
-  <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
-  <div id="bs-example-collapse-1" class="panel-collapse collapse in" role="tabpanel">
-    <div class="list-group">
-      <a class="list-group-item" routerLink="/input/clickMe" routerLinkActive="active">
-        点击事件
+<!--<div class="panel panel-success left-menu">-->
+<!--&lt;!&ndash; 利用data-target指定要折叠的分组列表 &ndash;&gt;-->
+<!--<div class="panel-heading collapsed" data-toggle="collapse in" data-target="#bs-example-collapse-1" role="tab"  aria-expanded="false" >-->
+<!--<h4 class="panel-title">-->
+<!--输入事件-->
+<!--<span class="fa fa-chevron-right right"></span>-->
+<!--</h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 &ndash;&gt;-->
+<!--<div id="bs-example-collapse-1" class="panel-collapse collapse in" role="tabpanel">-->
+<!--<div class="list-group">-->
+<!--<a class="list-group-item" routerLink="/input/clickMe" routerLinkActive="active">-->
+<!--点击事件-->
+<!--</a>-->
+<!--<a class="list-group-item" routerLink="/input/keyup" routerLinkActive="active">-->
+<!--键盘事件1-->
+<!--</a>-->
+<!--<a class="list-group-item" routerLink="/input/loopBack" routerLinkActive="active">-->
+<!--模板引用变量-->
+<!--</a>-->
+<!--<a class="list-group-item" routerLink="/input/keyup2" routerLinkActive="active">-->
+<!--键盘事件2-->
+<!--</a>-->
+<!--<a class="list-group-item" routerLink="/input/keyup3" routerLinkActive="active">-->
+<!--键盘事件3-->
+<!--</a>-->
+<!--<a class="list-group-item" routerLink="/input/keyup4" routerLinkActive="active">-->
+<!--键盘事件4-->
+<!--</a>-->
+<!--<a class="list-group-item" routerLink="/input/mySkill" routerLinkActive="active">-->
+<!--我的技能-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="panel panel-primary left-menu">-->
+<!--<div class="panel-heading collapsed hidden" data-toggle="collapse in" data-target="#bs-example-collapse-2" role="tab"  aria-expanded="false" >-->
+<!--<h4 class="panel-title">-->
+<!--表单-->
+<!--<span class="fa fa-chevron-right right"></span>-->
+<!--</h4>-->
+<!--</div>-->
+<!--&lt;!&ndash; .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 &ndash;&gt;-->
+<!--<div id="bs-example-collapse-2" class="panel-collapse collapse in" role="tabpanel">-->
+<!--<div class="list-group">-->
+<!--<a class="list-group-item" routerLink="/myform" routerLinkActive="active">-->
+<!--表单-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<!--<button class="btn btn-default" id="toggle-sidebar" type="button" (click)="eventCalled()">
+  &#9776;
+</button>
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+  <ul class="list-group">
+    <li>
+      <a [routerLink]="['/home']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 首页
       </a>
-      <a class="list-group-item" routerLink="/input/keyup" routerLinkActive="active">
-        键盘事件1
+    </li>
+    <ul class="nested-menu">
+      <a class="list-group-item" (click)="addExpandClass('pages')">
+        <span><i class="fa fa-plus"></i> &nbsp; 输入事件</span>
       </a>
-      <a class="list-group-item" routerLink="/input/loopBack" routerLinkActive="active">
-        模板引用变量
+      <li class="nested" [ngClass]="{'expand' : showMenu === 'pages' }">
+        <ul class="submenu">
+          <li>
+            <a [routerLink]="['/input/clickMe']" [routerLinkActive]="['router-link-active']"><span>点击事件</span></a>
+          </li>
+          <li>
+            <a [routerLink]="['/input/keyup']" [routerLinkActive]="['router-link-active']"><span>键盘事件1</span></a>
+          </li>
+          <li>
+            <a [routerLink]="['/input/loopBack']" [routerLinkActive]="['router-link-active']"><span>模板引用变量</span></a>
+          </li>
+          <li>
+            <a [routerLink]="['/input/keyup2']" [routerLinkActive]="['router-link-active']"><span>键盘事件2</span></a>
+          </li>
+          <li>
+            <a [routerLink]="['/input/keyup3']" [routerLinkActive]="['router-link-active']"><span>键盘事件3</span></a>
+          </li>
+          <li>
+            <a [routerLink]="['/input/keyup4']" [routerLinkActive]="['router-link-active']"><span>键盘事件4</span></a>
+          </li>
+          <li>
+            <a [routerLink]="['/input/mySkill']" [routerLinkActive]="['router-link-active']"><span>我的技能</span></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <li>
+      <a [routerLink]="['/myform']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <i class="fa fa-file-o"></i> &nbsp;表单
       </a>
-      <a class="list-group-item" routerLink="/input/keyup2" routerLinkActive="active">
-        键盘事件2
+    </li>
+  </ul>
+</nav>-->
+
+
+<ul class=" sidebar nav flex-column nav-pills">
+  <li class="nav-item">
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']" class="list-group-item">
+      <i class="fa fa-fw fa-dashboard"></i> 首页
+    </a>
+  </li>
+  <li class="nav-item dropdown" dropdown>
+    <a  [routerLinkActive]="['active']"  id="single-button" class="list-group-item" dropdownToggle>
+      <i class="fa fa-file-o"></i> &nbsp;输入
+    </a>
+    <div dropdownMenu role="menu" aria-labelledby="single-button" >
+      <a class="dropdown-item" [routerLink]="['/input/clickMe']" [routerLinkActive]="['active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 点击事件
       </a>
-      <a class="list-group-item" routerLink="/input/keyup3" routerLinkActive="active">
-        键盘事件3
+      <a class="dropdown-item" [routerLink]="['/input/keyup']" [routerLinkActive]="['active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 键盘事件1
       </a>
-      <a class="list-group-item" routerLink="/input/keyup4" routerLinkActive="active">
-        键盘事件4
+
+      <a class="dropdown-item" [routerLink]="['/input/loopBack']" [routerLinkActive]="['active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 模板引用变量
       </a>
-      <a class="list-group-item" routerLink="/input/mySkill" routerLinkActive="active">
-        我的技能
+      <a class="dropdown-item" [routerLink]="['/input/keyup2']" [routerLinkActive]="['active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 键盘事件2
+      </a>
+      <a class="dropdown-item" [routerLink]="['/input/keyu3']" [routerLinkActive]="['active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 键盘事件3
+      </a>
+      <a class="dropdown-item" [routerLink]="['/input/keyup4']" [routerLinkActive]="['active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 键盘事件4
+      </a>
+      <a class="dropdown-item" [routerLink]="['/input/mySkill']" [routerLinkActive]="['active']" class="list-group-item">
+        <i class="fa fa-fw fa-dashboard"></i> 我的技能
       </a>
     </div>
-  </div>
-</div>
-<div class="panel panel-primary left-menu">
-  <div class="panel-heading collapsed hidden" data-toggle="collapse in" data-target="#bs-example-collapse-2" role="tab"  aria-expanded="false" >
-    <h4 class="panel-title">
-      表单
-      <span class="fa fa-chevron-right right"></span>
-    </h4>
-  </div>
-  <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
-  <div id="bs-example-collapse-2" class="panel-collapse collapse in" role="tabpanel">
-    <div class="list-group">
-      <a class="list-group-item" routerLink="/myform" routerLinkActive="active">
-        表单
-      </a>
-    </div>
-  </div>
-</div>
+  </li>
+  <li class="nav-item">
+    <a [routerLink]="['/myform']" [routerLinkActive]="['active']" class="list-group-item">
+      <i class="fa fa-file-o"></i> &nbsp;表单
+    </a>
+  </li>
+</ul>
