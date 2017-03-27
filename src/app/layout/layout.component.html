@@ -1,0 +1,14 @@
+<!-- top navbar-->
+<app-header></app-header>
+<!-- sidebar-->
+<app-sidebar></app-sidebar>
+
+<!-- Main section-->
+<section class="main-container" [ngClass]="{sidebarPushRight: isActive}">
+  <!-- Page content-->
+  <router-outlet></router-outlet>
+</section>
+
+
+<!-- Page footer-->
+<app-footer></app-footer>
